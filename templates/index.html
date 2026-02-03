@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Train Tracking</title>
+</head>
+<body>
+    <h1>Live Train Tracking</h1>
+    <p id="data">Loading...</p>
+
+    <script>
+        setInterval(() => {
+            fetch("/location")
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById("data").innerHTML =
+                        `Lat: ${data.lat}<br>
+                         Lng: ${data.lng}<br>
+                         Time: ${data.time}`;
+                });
+        }, 1000);
+    </script>
+</body>
+</html>

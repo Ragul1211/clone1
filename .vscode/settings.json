@@ -1,0 +1,23 @@
+{
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true
+    },
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "88"
+    ],
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=88"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.testing.pytestEnabled": false,
+    "terminal.integrated.inheritEnv": true
+}
